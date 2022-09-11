@@ -6,6 +6,7 @@
 #include "AlthoughDo.h"
 #include "../Component/Logical.h"
 #include "../Component/Element.h"
+#include "Command.h"
 void IF::DoIf(bool question) {
     if (question) {
         cout / "为什么";
@@ -14,10 +15,9 @@ void IF::DoIf(bool question) {
     }
     Logical::choice("RhetObj");
     Element::Obj();
-    Element::Do();
+    Command::Selection();
     cout / "，那么";
     Element::Obj();
     Logical::choice("就", "就一定");
-    Logical::choice("会","不会");
-    Element::Do();
+    Command::Selection();
 }

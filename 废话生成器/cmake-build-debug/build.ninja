@@ -88,6 +88,12 @@ build CMakeFiles/untitled.dir/src/Component/Element.cpp.o: CXX_COMPILER__untitle
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir/src/Component
 
+build CMakeFiles/untitled.dir/src/Syntactic/Command.cpp.o: CXX_COMPILER__untitled_Debug /Users/jerryzhou/CLionProjects/废话生成器/src/Syntactic/Command.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/src/Syntactic/Command.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1 -std=gnu++17
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/src/Syntactic
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target untitled
@@ -96,7 +102,7 @@ build CMakeFiles/untitled.dir/src/Component/Element.cpp.o: CXX_COMPILER__untitle
 #############################################
 # Link the executable untitled
 
-build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/src/main.cpp.o CMakeFiles/untitled.dir/src/Resolve/Resolve.cpp.o CMakeFiles/untitled.dir/src/Syntactic/AlsoDo.cpp.o CMakeFiles/untitled.dir/src/Syntactic/AlthoughDo.cpp.o CMakeFiles/untitled.dir/src/Syntactic/DoIf.cpp.o CMakeFiles/untitled.dir/src/Component/Logical.cpp.o CMakeFiles/untitled.dir/src/Component/Element.cpp.o
+build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/src/main.cpp.o CMakeFiles/untitled.dir/src/Resolve/Resolve.cpp.o CMakeFiles/untitled.dir/src/Syntactic/AlsoDo.cpp.o CMakeFiles/untitled.dir/src/Syntactic/AlthoughDo.cpp.o CMakeFiles/untitled.dir/src/Syntactic/DoIf.cpp.o CMakeFiles/untitled.dir/src/Component/Logical.cpp.o CMakeFiles/untitled.dir/src/Component/Element.cpp.o CMakeFiles/untitled.dir/src/Syntactic/Command.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1
   OBJECT_DIR = CMakeFiles/untitled.dir
   POST_BUILD = :

@@ -10,7 +10,6 @@ class AlthoughDo{
 public:
     static void AlthoughDo1(void);
     static void AlthoughDo2(void);
-    static void AlthoughDo3(void);
 };
 
 

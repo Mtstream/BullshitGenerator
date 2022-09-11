@@ -6,12 +6,13 @@
 #include "Syntactic/AlsoDo.h"
 #include "Syntactic/AlthoughDo.h"
 #include "Syntactic/DoIf.h"
+#include "Syntactic/Command.h"
 #include "Component/Logical.h"
 using namespace std;
 class PrintWord{
 public:
     void print(int flag = 0) {
-        if (flag < 20) {
+        if (flag < 10) {
             Switch();
             print(flag + 1);
         }
