@@ -221,8 +221,11 @@ public:
   static void VerbObj(void) {
     if (Rand()) {
       cout << adv1[rand() % sizeof(adv1) / sizeof(string)];
-    } else {
-      cout << ten[rand() % sizeof(ten) / sizeof(string)];
+    }
+    if (Rand()) {
+      if (Rand()) {
+        cout << ten[rand() % sizeof(ten) / sizeof(string)];
+      }
       cout << adv2[rand() % sizeof(adv2) / sizeof(string)] << "地";
     }
     if (Rand()) {
