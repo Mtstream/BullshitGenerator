@@ -1,0 +1,14 @@
+# ninja log v5
+3	503	1662892589597978089	CMakeFiles/untitled.dir/src/main.cpp.o	67b2fdef9348423b
+0	46	1662892811837691544	build.ninja	840ff4b034564bf
+3	496	1662892589589372639	CMakeFiles/untitled.dir/src/Syntactic/AlsoDo.cpp.o	e29437f41a694f1
+2	355	1662832081792157699	CMakeFiles/untitled.dir/main.cpp.o	ba87f5e66ffd5e78
+3	395	1662891198744151693	CMakeFiles/untitled.dir/src/Resolve.cpp.o	4dd57efac2cf97da
+2	37	1662891153662023256	CMakeFiles/untitled.dir/src/Syntactic.cpp.o	7b5b1075fd0ee69d
+503	552	1662892589647217798	untitled	4873eff107616d00
+2	542	1662892470704424326	CMakeFiles/untitled.dir/src/Resolve/Resolve.cpp.o	9e2ab00420380995
+3	561	1662893294108385245	CMakeFiles/untitled.dir/src/Syntactic/AlthoughDo.cpp.o	50de2736bdaa81d4
+4	561	1662893294107865797	CMakeFiles/untitled.dir/src/Syntactic/DoIf.cpp.o	69511c41be6350c2
+3	561	1662893294112275374	CMakeFiles/untitled.dir/src/main.cpp.o	67b2fdef9348423b
+3	562	1662893294108207290	CMakeFiles/untitled.dir/src/Syntactic/AlsoDo.cpp.o	e29437f41a694f1
+562	611	1662893294165493211	untitled	718c940917ca050e
