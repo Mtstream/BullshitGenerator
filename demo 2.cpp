@@ -4,28 +4,28 @@
 #include <string>
 using namespace std;
 string Start[] = {"一般理性而言,",
-                  "呃呃,我觉得你说的不对,因为",
-                  "你是正确的,不过考虑到",
-                  "如果提到这个,就不得不提到",
-                  "你要是这么说的话,那话可就不能这么说了,我们应该考虑到",
-                  "毋庸置疑的,这就是问题的关键,然而",
+                  "呃呃，我觉得你说的不对，因为",
+                  "你是正确的，不过考虑到",
+                  "如果提到这个，就不得不提到",
+                  "你要是这么说的话，那话可就不能这么说了，我们应该考虑到",
+                  "毋庸置疑的，这就是问题的关键，然而",
                   "所以",
-                  "我跟你说个典故吧,",
+                  "我跟你说个典故吧，",
                   "然而",
                   "我们应该考虑到",
                   "捏嘛的",
-                  "我们不妨设想一下这么一种情况,",
+                  "我们不妨设想一下这么一种情况，",
                   "其实",
-                  "我觉得不一定,你是错误的,",
-                  "我已经说了很多遍了,",
-                  "天呐!",
-                  "我的意思是,"};
+                  "我觉得不一定,你是错误的，",
+                  "我已经说了很多遍了，",
+                  "天呐！",
+                  "我的意思是，"};
 string End[] = {",这些是我们应该考虑到的。",
-                ",难道你就没有想过这点？",
+                ",难道你就没有考虑过这点？",
                 ",很不可思议吧？",
                 "，呃呃,可是以上观点我一个都不认可。",
-                ",你问为什么？",
-                ",可是你真觉得这句话是对的？"};
+                "，你问为什么？",
+                "，可是你真觉得这句话是对的？"};
 string Say[] = {"拷问着",       "说道", "苦诉",  "大吼",
                 "扯着嗓子说道", "劝告", "尖叫道"};
 string question[] = {"难道", "典中典,你这种人我见得多了,你就没有考虑过",
@@ -200,6 +200,13 @@ public:
       VerbObj();
     }
   };
+  static bool Rand(const float Magn = 1) {
+    if (Magn * (rand() % (rand() % 101)) > 50){
+      return true;
+    } else {
+      return false;
+    }
+  }
   static void Obj(void) {
     if (Rand()) {
       if (Rand()) {
@@ -210,13 +217,6 @@ public:
       cout << adj[rand() % sizeof(adj) / sizeof(string)] << "的";
     }
     cout << noun[rand() % sizeof(noun) / sizeof(string)];
-  }
-  static bool Rand(void) {
-    if (rand() % (rand() % 101) > (rand() % 50)) {
-      return true;
-    } else {
-      return false;
-    }
   }
   static void VerbObj(void) {
     if (Rand()) {
@@ -247,7 +247,7 @@ public:
 private:
   void Switch() {
     int flagQ = Rand();
-    int flagT = Rand();
+    int flagT = Rand(0.5);
 
     if (flagT) {
       talk();
@@ -285,9 +285,9 @@ private:
 
     if (flagQ) {
       if (flagT) {
-        cout << "?”";
+        cout << "？”";
       } else {
-        cout << "?";
+        cout << "？";
       }
     } else {
       if (Rand()) {
@@ -299,7 +299,7 @@ private:
         if (Rand()) {
           cout << "。";
         } else {
-          cout << "!";
+          cout << "！";
         }
       }
     }
@@ -337,7 +337,7 @@ private:
       cout << ten[rand() % sizeof(ten) / sizeof(string)];
       cout << adv2[rand() % sizeof(adv2) / sizeof(string)] << "地";
     }
-    cout << Say[rand() % sizeof(Say) / sizeof(string)] << ":“";
+    cout << Say[rand() % sizeof(Say) / sizeof(string)] << "：“";
   }
 };
 
