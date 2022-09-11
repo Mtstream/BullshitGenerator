@@ -46,7 +46,7 @@ void Command::Command2(){
     if(Logical::Magn()){
         cout/"，";
         Element::Obj();
-        Logical::choice("将会跟随","将会被引导去和");
+        Logical::choice("将会跟随","将会被你引导去和");
         Element::Obj();
         cout/"一起";
         Element::Do();

@@ -53,16 +53,10 @@ void Element::Do(bool T){
             cout/"vebi";
         }
     } else {
+        Logical::choice("RhetVerb");
         Logical::choice("把","被");
         Element::Obj();
-        if(Logical::choice()){
-            Logical::choice("RhetVerb");
-            cout/"verb";
-            Element::Obj();
-        } else {
-            Logical::choice("RhetVerb");
-            cout/"vebi";
-        }
+        Logical::choice("verb","vebi");
     }
     if(flag){
         cout/"！”";
