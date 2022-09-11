@@ -20,7 +20,14 @@ string Start[] = {"一般理性而言,",
                   "我已经说了很多遍了,",
                   "天呐!",
                   "我的意思是,"};
-string Say[] = {"拷问着", "说道", "苦诉", "大吼", "扯着嗓子说道", "劝告"};
+string End[] = {",这些是我们应该考虑到的。",
+                ",难道你就没有想过这点？",
+                ",很不可思议吧？",
+                "，呃呃,可是以上观点我一个都不认可。",
+                ",你问为什么？",
+                ",可是你真觉得这句话是对的？"};
+string Say[] = {"拷问着",       "说道", "苦诉",  "大吼",
+                "扯着嗓子说道", "劝告", "尖叫道"};
 string question[] = {"难道", "典中典,你这种人我见得多了,你就没有考虑过",
                      "可是你就没有想过", "可是你就这么肯定", "你真是愚蠢,难道"};
 string adj[] = {"绿色", "旋转", "美丽", "百年", "寒冷", "永恒",   "烧毁",
@@ -82,8 +89,8 @@ string vebi[] = {"抽搐",   "走路", "死掉", "卡机", "排泄", "自爆", "
 string ten[] = {"十分", "很", "究极", "非常"};
 string adv2[] = {"无奈", "失望", "愤怒", "开心",
                  "用力", "绝望", "懊恼", "心不在焉"};
-string adv1[] = {"忘记",   "原地", "不断", "突然",
-                 "进一步", "逐渐", "悄悄", "头也不回地"};
+string adv1[] = {"忘记", "原地", "不断",       "突然",        "进一步",
+                 "逐渐", "悄悄", "头也不回地", "把屁股翘起来"};
 string prep[] = {"中", "里面", "外面", "上面", "下面", "内部"};
 class Syntactic {
 public:
@@ -197,7 +204,7 @@ public:
     if (Rand()) {
       if (Rand()) {
         cout << "在" << noun[rand() % sizeof(noun) / sizeof(string)]
-             << prep[rand() % sizeof(prep) / sizeof(string)] <<"的";
+             << prep[rand() % sizeof(prep) / sizeof(string)] << "的";
       }
     } else {
       cout << adj[rand() % sizeof(adj) / sizeof(string)] << "的";
@@ -241,14 +248,18 @@ private:
   void Switch() {
     int flagQ = Rand();
     int flagT = Rand();
+
     if (flagT) {
       talk();
     }
-    if (flagQ) {
-      cout << question[rand() % sizeof(question) / sizeof(string)];
-    } else {
-      cout << Start[rand() % sizeof(Start) / sizeof(string)];
+    if (Rand()) {
+      if (flagQ) {
+        cout << question[rand() % sizeof(question) / sizeof(string)];
+      } else {
+        cout << Start[rand() % sizeof(Start) / sizeof(string)];
+      }
     }
+
     switch (rand() % 10) {
     case 1:
       IF().DoIf(flagQ);
@@ -271,6 +282,7 @@ private:
     default:
       Do();
     }
+
     if (flagQ) {
       if (flagT) {
         cout << "?”";
@@ -278,17 +290,16 @@ private:
         cout << "?";
       }
     } else {
-      if (flagT) {
-        if (Rand()) {
-          cout << "!”";
-        } else {
-          cout << "。”";
+      if (Rand()) {
+        cout << End[rand() % sizeof(End) / sizeof(string)];
+        if (flagT) {
+          cout << "”";
         }
       } else {
         if (Rand()) {
-          cout << "!";
-        } else {
           cout << "。";
+        } else {
+          cout << "!";
         }
       }
     }
