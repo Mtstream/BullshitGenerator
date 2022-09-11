@@ -90,87 +90,47 @@ public:
   class AlsoDo {
   public:
     void AlsoDo1(void) {
-      Subj();
+      Obj();
       cout << "不仅会";
-      if (Rand()) {
-        Verb();
-        Obj();
-      } else {
-        cout << vebi[rand() % sizeof(vebi) / sizeof(string)];
-      }
+      VerbObj();
       cout << ",还会";
-      if (Rand()) {
-        Verb();
-        Obj();
-      } else {
-        cout << vebi[rand() % sizeof(vebi) / sizeof(string)];
-      }
+      VerbObj();
     }
     void AlsoDo2(void) {
-      Subj();
+      Obj();
       cout << "在";
-      if (Rand()) {
-        Verb();
-        Obj();
-      } else {
-        cout << vebi[rand() % sizeof(vebi) / sizeof(string)];
-      }
+      VerbObj();
       cout << "的同时,还会";
-      if (Rand()) {
-        Verb();
-        Obj();
-      } else {
-        cout << vebi[rand() % sizeof(vebi) / sizeof(string)];
-      }
+      VerbObj();
     }
     void AlsoDo3(void) {
-      Subj();
+      Obj();
       cout << "会一边";
-      if (Rand()) {
-        Verb();
-        Obj();
-      } else {
-        cout << vebi[rand() % sizeof(vebi) / sizeof(string)];
-      }
+      VerbObj();
       cout << ",一边";
-      if (Rand()) {
-        Verb();
-        Obj();
-      } else {
-        cout << vebi[rand() % sizeof(vebi) / sizeof(string)];
-      }
+      VerbObj();
     }
   };
   class AlthoughDo {
   public:
     void AlthoughDo1(void) {
       cout << "即使";
-      Subj();
+      Obj();
       if (Rand()) {
       } else {
         cout << "不会";
       }
-      if (Rand()) {
-        Verb();
-        Obj();
-      } else {
-        cout << vebi[rand() % sizeof(vebi) / sizeof(string)];
-      }
+      VerbObj();
       cout << ",";
       Obj();
       cout << "也会";
-      if (Rand()) {
-        Verb();
-        Obj();
-      } else {
-        cout << vebi[rand() % sizeof(vebi) / sizeof(string)];
-      }
+      VerbObj();
     }
     void AlthoughDo2(void) {
       if (Rand()) {
         cout << "虽然";
       }
-      Subj();
+      Obj();
       if (Rand()) {
         if (Rand()) {
           if (Rand()) {
@@ -190,12 +150,7 @@ public:
       } else {
         cout << "会";
       }
-      if (Rand()) {
-        Verb();
-        Obj();
-      } else {
-        cout << vebi[rand() % sizeof(vebi) / sizeof(string)];
-      }
+      VerbObj();
       if (Rand()) {
         cout << ",但是即便如此,";
       } else {
@@ -203,8 +158,7 @@ public:
       }
       Obj();
       cout << "也会";
-      Verb();
-      Obj();
+      VerbObj();
     }
   };
   class IF {
@@ -219,15 +173,10 @@ public:
           cout << "假设";
         }
       }
-      Subj();
-      if (Rand()) {
-        Verb();
-        Obj();
-      } else {
-        cout << vebi[rand() % sizeof(vebi) / sizeof(string)];
-      }
+      Obj();
+      VerbObj();
       cout << ",";
-      Subj();
+      Obj();
       if (Rand()) {
         if (Rand()) {
           cout << "就一定不会";
@@ -241,31 +190,16 @@ public:
           cout << "就会";
         }
       }
-      Verb();
-      Obj();
+      VerbObj();
     }
   };
-  static void Subj(void) {
-    if (Rand()) {
-      cout << adj[rand() % sizeof(adj) / sizeof(string)] << "的";
-    }
-    cout << noun[rand() % sizeof(noun) / sizeof(string)];
-    if (Rand()) {
-      cout << "在" << noun[rand() % sizeof(noun) / sizeof(string)]
-           << prep[rand() % sizeof(prep) / sizeof(string)];
-    }
-  }
-  static void Verb(void) {
-    if (Rand()) {
-      cout << adv1[rand() % sizeof(adv1) / sizeof(string)];
-    } else {
-      cout << ten[rand() % sizeof(ten) / sizeof(string)];
-      cout << adv2[rand() % sizeof(adv2) / sizeof(string)] << "地";
-    }
-    cout << verb[rand() % sizeof(verb) / sizeof(string)];
-  }
   static void Obj(void) {
     if (Rand()) {
+      if (Rand()) {
+        cout << "在" << noun[rand() % sizeof(noun) / sizeof(string)]
+             << prep[rand() % sizeof(prep) / sizeof(string)] <<"的";
+      }
+    } else {
       cout << adj[rand() % sizeof(adj) / sizeof(string)] << "的";
     }
     cout << noun[rand() % sizeof(noun) / sizeof(string)];
@@ -275,6 +209,20 @@ public:
       return true;
     } else {
       return false;
+    }
+  }
+  static void VerbObj(void) {
+    if (Rand()) {
+      cout << adv1[rand() % sizeof(adv1) / sizeof(string)];
+    } else {
+      cout << ten[rand() % sizeof(ten) / sizeof(string)];
+      cout << adv2[rand() % sizeof(adv2) / sizeof(string)] << "地";
+    }
+    if (Rand()) {
+      cout << verb[rand() % sizeof(verb) / sizeof(string)];
+      Obj();
+    } else {
+      cout << vebi[rand() % sizeof(vebi) / sizeof(string)];
     }
   }
 };
@@ -348,7 +296,7 @@ private:
 
 private:
   void Do(void) {
-    Subj();
+    Obj();
     if (Rand()) {
       if (Rand()) {
         cout << "一定不会";
@@ -358,16 +306,11 @@ private:
     } else {
       cout << "会";
     }
-    if (Rand()) {
-      Verb();
-      Obj();
-    } else {
-      cout << vebi[rand() % sizeof(vebi) / sizeof(string)];
-    }
+    VerbObj();
   }
 
   void talk(void) {
-    Subj();
+    Obj();
     if (Rand()) {
       if (Rand()) {
         cout << "一定不会";
