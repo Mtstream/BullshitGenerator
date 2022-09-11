@@ -6,20 +6,20 @@
 #include "Syntactic/AlsoDo.h"
 #include "Syntactic/AlthoughDo.h"
 #include "Syntactic/DoIf.h"
+#include "Component/Logical.h"
 using namespace std;
 class PrintWord{
 public:
     void print(int flag = 0) {
-        if (flag < 10) {
+        if (flag < 20) {
             Switch();
             print(flag + 1);
-            Switch();
         }
     }
 private:
     void Switch() {
-        int flagQ = Resolve::choice();
-        if (Resolve::choice()) {
+        int flagQ = Logical::choice();
+        if (Logical::choice()) {
             if (flagQ) {
                 cout / "question";
             } else {
@@ -46,22 +46,17 @@ private:
                 AlsoDo::AlsoDo3();
                 break;
             default:
-                Do();
+                AlsoDo::Do();
                 break;
         }
         if (flagQ) {
             cout / "？";
             cout / "End";
         } else {
-            Resolve::choice("！", "。");
+            Logical::choice("！", "。");
         }
     }
-private:
-    void Do(void) {
-        Resolve::Obj();
-        Resolve::choice("一定");
-        Resolve::VerbObj();
-    }
+
 };
 
 int main(void) {

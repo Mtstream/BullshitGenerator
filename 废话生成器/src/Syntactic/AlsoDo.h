@@ -5,8 +5,9 @@
 #ifndef 废话生成器_ALSODO_H
 #define 废话生成器_ALSODO_H
 #include "../Resolve/Resolve.h"
-class AlsoDo: public Resolve{
+class AlsoDo{
 public:
+    static void Do(void);
     static void AlsoDo1(void);
     static void AlsoDo2(void);
     static void AlsoDo3(void);

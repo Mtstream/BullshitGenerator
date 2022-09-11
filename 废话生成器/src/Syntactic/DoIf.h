@@ -6,7 +6,7 @@
 #define 废话生成器_DOIF_H
 
 #include "../Resolve/Resolve.h"
-class IF :Resolve{
+class IF{
 public:
    static void DoIf(bool question = 0);
 };

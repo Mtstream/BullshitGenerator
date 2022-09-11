@@ -3,25 +3,35 @@
 //
 
 #include "AlsoDo.h"
-#include "../Resolve/Resolve.h"
+#include "../Component/Logical.h"
+#include "../Component/Element.h"
 using namespace std;
-void AlsoDo::AlsoDo1(void) {
-    Obj();
-    cout / "不仅";
-    VerbObj();
-    cout / "，还";
-    VerbObj();
+void AlsoDo::Do() {
+    Element::Obj();
+    Logical::choice("一定");
+    Logical::choice("会","不会");
+    Element::Do();
 }
-void AlsoDo::AlsoDo2(void) {
-    Obj();
-    VerbObj(true);
-    cout / "的同时，还";
-    VerbObj(true);
+void AlsoDo::AlsoDo1() {
+    Element::Obj();
+    cout/"不仅";
+    Logical::choice("会","不会");
+    Element::Do();
+    cout/",还";
+    Logical::choice("会","不会");
+    Element::Do();
 }
-void AlsoDo::AlsoDo3(void) {
-    Obj();
+void AlsoDo::AlsoDo2() {
+    Element::Obj();
+    cout/"在";
+    Element::Do();
+    cout/"的同时，还会";
+    Element::Do();
+}
+void AlsoDo::AlsoDo3() {
+    Element::Obj();
     cout / "一边";
-    VerbObj();
+    Element::Do();
     cout / "，一边";
-    VerbObj();
+    Element::Do();
 }

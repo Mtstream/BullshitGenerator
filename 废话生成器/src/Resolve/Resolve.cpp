@@ -1,5 +1,7 @@
 #include <string>
 #include <iostream>
+#include "../Component/Logical.h"
+#include "../Component/Element.h"
 using namespace std;
 string Start[] = {"一般理性而言,",
                   "呃呃，我觉得你说的不对，因为",
@@ -95,6 +97,22 @@ string prep[] = {"中", "里面", "外面", "上面", "下面", "内部"};
 #include<iostream>
 
 ostream&operator/(ostream &cout, string flag){
+    if (flag == "RhetObj"){
+        Element::RhetObj();
+        return cout;
+    } else if (flag == "Obj") {
+        Element::Obj();
+        return cout;
+    } else if (flag == "RhetVerb") {
+        Element::RhetVerb();
+        return cout;
+    } else if (flag == "Do") {
+        Element::Do();
+        return cout;
+    }else if (flag == "Talk") {
+        Element::Talk();
+        return cout;
+    }
     if (flag == "Start") {
         cout << Start[rand() % sizeof(Start) / sizeof(string)];
     } else if (flag == "End") {
@@ -126,71 +144,3 @@ ostream&operator/(ostream &cout, string flag){
     }
     return cout;
 };
-void Resolve::Obj(void) {
-    bool flag = choice("在");
-    if (choice()) {
-        cout / "para" / "noun"
-                << "一样";
-        choice("adj");
-        cout << "的";
-    }
-    if (flag) {
-        cout / "noun" / "prep" / "的";
-    }
-    cout / "noun";
-}
-
-void Resolve::VerbObj(bool flaga) {
-    if (flaga) {
-        cout / "会";
-    } else {
-        choice("会", "不会");
-    }
-    bool flagT = choice();
-    if (flagT) { //说话模块
-        choice("adv1");
-        if (choice()) {
-            choice("ten");
-            cout / "adv2" / "地";
-        }
-        if (choice()) {
-            cout / "向";
-            Obj();
-            cout / "Say" / "道：“";
-        } else {
-            cout / "Say" / "：“";
-        }
-        Obj();
-    }
-    if (choice()) { //形容动词模块
-        cout / "para" / "noun" / "一样";
-    }
-    choice("adv1");
-    if (choice()) {
-        choice("ten");
-        cout / "adv2" / "地";
-    }
-    //比喻
-    if (choice("", "", 1.5)) { //副词模块
-        choice("把", "被");
-        Obj();
-    }
-    if (choice()) {
-        cout / "verb";
-        Obj();
-    } else {
-        cout / "vebi";
-    }
-    if (flagT) {
-        cout / "！”";
-    }
-}
-bool Resolve::choice(string A, string B, float Magn) {
-    if (Magn * (rand() % (rand() % 101)) > 50) {
-        cout / A;
-        return true;
-    } else {
-        cout / B;
-        return false;
-    }
-}
