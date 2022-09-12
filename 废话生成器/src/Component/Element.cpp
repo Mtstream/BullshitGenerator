@@ -3,7 +3,7 @@
 void Element::FuncRhetObj() {
     bool flag = Logical::choice("在");
 
-    if (Logical::Magn(0.7)) {
+    if (Logical::Magn(0.5)) {
         if(Logical::Magn()){
             cout/"身为"/Obj/"的";
         } else {
@@ -17,12 +17,12 @@ void Element::FuncRhetObj() {
 }
 void Element::FuncObj() {
     cout/ALT(RhetObj)/noun;
-    if(Logical::Magn()){
+    if(Logical::Magn(0.5)){
         cout/ALT("和","与")/Obj/ALT("们");
     }
 }
 void Element::FuncRhetVerb() {
-    if (Logical::Magn(0.7)) {
+    if (Logical::Magn(0.5)) {
         cout/para/noun/"一样";
     }
     cout/ALT(adv1);
@@ -56,6 +56,6 @@ void Element::FuncAction(bool T){
         cout/ALT(RhetVerb)/ALT("把","被")/Obj/ALT(verb,vebi);
     }
     if(flag){
-        cout/ALT("！”","。”");
+        cout/ALT("”","”");
     }
 }

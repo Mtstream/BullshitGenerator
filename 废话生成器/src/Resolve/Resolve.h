@@ -6,7 +6,7 @@
 using namespace std;
 ostream &operator/(ostream &cout, string flag);
 static string  start = "start";
-static string   end = "end";
+static string   ended = "end";
 static string   say = "say";
 static string   question = "question";
 static string   para = "para";
