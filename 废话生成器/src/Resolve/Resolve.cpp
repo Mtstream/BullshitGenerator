@@ -1,6 +1,5 @@
 #include <string>
 #include <iostream>
-#include "../Component/Logical.h"
 #include "../Component/Element.h"
 #include "../Syntactic/Command.h"
 using namespace std;

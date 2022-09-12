@@ -1,15 +1,13 @@
 #include "Element.h"
 #include "Logical.h"
-#include "../Resolve/Resolve.h"
 void Element::RhetObj() {
-    Logical choose;
     bool flag = Logical::choice("在");
 
     if (Logical::Magn(0.7)) {
         if(Logical::Magn()){
             cout/"身为"/"Obj"/"的";
         } else {
-            cout/"para"/"noun"/"一样"/choose("adj")/"的";
+            cout/"para"/"noun"/"一样"/ALT("adj")/"的";
         }
     }
 
@@ -18,25 +16,22 @@ void Element::RhetObj() {
     }
 }
 void Element::Obj() {
-    Logical choose;
-    cout/choose("RhetObj")/"noun";
+    cout/ALT("RhetObj")/"noun";
     if(Logical::Magn()){
-        cout/choose("和","与")/"Obj"/choose("们");
+        cout/ALT("和","与")/"Obj"/ALT("们");
     }
 }
 void Element::RhetVerb() {
-    Logical choose;
     if (Logical::Magn(0.7)) {
         cout/"para"/"noun"/"一样";
     }
-    cout/choose("adv1");
+    cout/ALT("adv1");
     if (Logical::Magn()) {
-        cout/choose("ten")/"adv2"/"地";
+        cout/ALT("ten")/"adv2"/"地";
     }
 }
 bool Element::Talk() {
-    Logical choose;
-    choose("RhetVerb");
+    ALT("RhetVerb");
     if (Logical::Magn()) {
         cout/"向"/"Obj"/"Say"/"道：“";
     } else {
@@ -45,23 +40,22 @@ bool Element::Talk() {
     return true;
 }
 void Element::Action(bool T){
-    Logical choose;
     bool flag = false;
     if(Logical::Magn() && T){
         flag = true;
         cout/"Talk"/"Obj";
     }
     if(Logical::Magn()){
-        choose("RhetVerb");
+        ALT("RhetVerb");
         if(Logical::Magn()){
             cout/"verb"/"Obj";
         } else {
             cout/"vebi";
         }
     } else {
-        cout/choose("RhetVerb")/choose("把","被")/"Obj"/choose("verb","vebi");
+        cout/ALT("RhetVerb")/ALT("把","被")/"Obj"/ALT("verb","vebi");
     }
     if(flag){
-        cout/choose("！”","。”");
+        cout/ALT("！”","。”");
     }
 }

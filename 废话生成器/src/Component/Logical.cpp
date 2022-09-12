@@ -1,6 +1,3 @@
-//
-// Created by Jerry Zhou on 11/9/2022.
-//
 
 #include "Logical.h"
 bool Logical::choice(std::string A, std::string B) {
