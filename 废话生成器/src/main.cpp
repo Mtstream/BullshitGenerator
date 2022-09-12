@@ -49,12 +49,8 @@ private:
                 AlsoDo::Do();
                 break;
         }
-        cout/ALT(ended);
-        if(flagQ){
-            cout/"?";
-        } else {
-            cout/ALT("！","？");
-        }
+        if(Logical::Magn()){}
+            cout/"，"/ended;
     }
 };
 int main(void) {
