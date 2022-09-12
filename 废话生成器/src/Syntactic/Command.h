@@ -14,6 +14,9 @@ private:
     static void Command2(void);
     static void Command3(void);
     static void Command4(void);
+    static void Command5(void);
+    static void Command6(void);
+    static void Command7(void);
 };
 
 

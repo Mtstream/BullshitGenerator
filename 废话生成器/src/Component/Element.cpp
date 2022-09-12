@@ -2,10 +2,16 @@
 #include "Logical.h"
 void Element::RhetObj() {
     bool flag = Logical::choice("在");
-    if (Logical::Magn(0.5)) {
-        cout / "para" / "noun" / "一样";
-        Logical::choice("adj");
-        cout / "的";
+    if (Logical::Magn(0.7)) {
+        if(Logical::Magn()){
+            cout/"身为";
+            Element::Obj();
+            cout/"的";
+        } else {
+            cout / "para" / "noun" / "一样";
+            Logical::choice("adj");
+            cout / "的";
+        }
     }
     if (flag) {
         cout / "noun" / "prep" / "的";
@@ -14,9 +20,14 @@ void Element::RhetObj() {
 void Element::Obj() {
     Logical::choice("RhetObj");
     cout/"noun";
+    if(Logical::Magn()){
+        Logical::choice("和","与");
+        Element::Obj();
+        Logical::choice("们");
+    }
 }
 void Element::RhetVerb() {
-    if (Logical::Magn(0.5)) {
+    if (Logical::Magn(0.7)) {
         cout / "para" / "noun" / "一样";
     }
     Logical::choice("adv1");
@@ -59,6 +70,7 @@ void Element::Do(bool T){
         Logical::choice("verb","vebi");
     }
     if(flag){
-        cout/"！”";
+        Logical::choice("。","！");
+        cout/"”";
     }
 }

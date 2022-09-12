@@ -19,6 +19,8 @@ void Command::Selection() {
         case 4:
             Command4();
             break;
+        case 5:
+            Command5();
         default:
             Logical::choice("会","不会");
             Element::Do();
@@ -32,36 +34,18 @@ void Command::Command1() {
     Element::Obj();
     cout/"一起";
     Element::Do();
-    if(Logical::Magn()){
-        Logical::choice("的同时","，顺便");
-        cout/"verb";
-        Element::Obj();
-        cout/"们";
-    }}
+}
 void Command::Command2(){
     Logical::choice("是由","是根据");
     Element::Obj();
     Logical::choice("RhetVerb");
     cout/"verb"/"的";
-    if(Logical::Magn()){
-        cout/"，";
-        Element::Obj();
-        Logical::choice("将会跟随","将会被你引导去和");
-        Element::Obj();
-        cout/"一起";
-        Element::Do();
-    }
 }
 void Command::Command3() {
-    cout/"和";
+    Logical::choice("会","不会");
+    Logical::choice("与","和");
     Element::Obj();
-    cout/"们成为好朋友，身为";
-    Element::Obj();
-    cout/"的";
-    Element::Obj();
-    cout/"会和";
-    Element::Obj();
-    cout/"们一起";
+    cout/"一起";
     Element::Do();
 }
 void Command::Command4() {
@@ -71,13 +55,17 @@ void Command::Command4() {
     Logical::choice("会","不会");
     Logical::choice("期盼","希望");
     Element::Obj();
-    cout/"在自己"/"verb"/"的时候被";
+    cout/"在自己";
+    Element::Do();
+    cout/"的时候";
+    Element::Do();
+}
+void Command::Command5() {
+    Logical::choice("将会跟随","将会被你引导去和");
     Element::Obj();
-    Logical::choice("RhetVerb");
-    cout/"verb";
-    if(Logical::Magn()){
-        cout/"，如果答案正好相反，那么肯定是因为";
-        Element::Obj();
-        Element::Do();
-    }
+    cout/"一起";
+    Element::Do();
+}
+void Command::Command6(void){
+
 }
