@@ -21,9 +21,9 @@ private:
         int flagQ = Logical::choice();
         if (Logical::choice()) {
             if (flagQ) {
-                cout / "question";
+                cout / question;
             } else {
-                cout / "Start";
+                cout / start;
             }
         }
         switch (rand() % 10) {
@@ -49,12 +49,8 @@ private:
                 AlsoDo::Do();
                 break;
         }
-        if (flagQ) {
-            cout / "？";
-            cout / "End";
-        } else {
-            Logical::choice("！", "。");
-        }
+
+        cout/ALT("end")/(ALT("？"),ALT("！","。"));
     }
 };
 int main(void) {

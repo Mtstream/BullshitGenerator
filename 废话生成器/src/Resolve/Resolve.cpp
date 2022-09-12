@@ -3,6 +3,7 @@
 #include "../Component/Element.h"
 #include "../Syntactic/Command.h"
 using namespace std;
+
 string Start[] = {"一般理性而言,",
                   "呃呃，我觉得你说的不对，因为",
                   "你是正确的，不过考虑到",
@@ -21,6 +22,7 @@ string Start[] = {"一般理性而言,",
                   "天呐！",
                   "我的意思是，",
                   "而","是这样的，"};
+
 string End[] = {"这些是我们应该考虑到的。",
                 "难道你就没有考虑过这点？",
                 "很不可思议吧？",
@@ -28,15 +30,20 @@ string End[] = {"这些是我们应该考虑到的。",
                 "你问为什么？",
                 "可是你真觉得这句话是对的？",
                 "我跟你说，这是好的，而且没有一点坏处。"};
+
 string Say[] = {"拷问", "说", "苦诉", "大吼", "扯着嗓子说", "劝告", "尖叫"};
-string question[] = {"难道", "典中典,你这种人我见得多了,你就没有考虑过",
+
+string Question[] = {"难道", "典中典,你这种人我见得多了,你就没有考虑过",
                      "可是你就没有想过", "可是你就这么肯定", "你真是愚蠢,难道"};
-string para[] = {"像", "犹如", "宛如", "和"};
-string adj[] = {"绿色", "旋转", "美丽", "百年", "寒冷", "永恒",   "烧毁",
+
+string Para[] = {"像", "犹如", "宛如", "和"};
+
+string Adj[] = {"绿色", "旋转", "美丽", "百年", "寒冷", "永恒",   "烧毁",
                 "燃烧", "死掉", "碳色", "活泼", "静态", "强大",   "弱小",
                 "沉底", "腹鳍", "冰冻", "随机", "高级", "奢侈",   "肥胖",
                 "黄色", "黑色", "木制", "铁质", "纺织", "正方形", "圆形"};
-string noun[] = {"我",         "乌鸦",       "码头",
+
+string Noun[] = {"我",         "乌鸦",       "码头",
                  "马桶",       "钻井",       "盾构机",
                  "负二次方",   "电视",       "垃圾桶",
                  "手机",       "酸液",       "大蒜",
@@ -72,7 +79,8 @@ string noun[] = {"我",         "乌鸦",       "码头",
                  "baka",       "引擎",       "塑料",
                  "速度",       "水池",      "红眼果蝇"
 };
-string verb[] = {"击打", "袭击", "偷袭", "爆破", "打开", "关闭",
+
+string Verb[] = {"击打", "袭击", "偷袭", "爆破", "打开", "关闭",
                  "堵塞", "杀掉", "进入", "推出", "退出", "删掉",
                  "治疗", "加热", "烧烤", "思考", "记得", "忘掉",
                  "清洗", "轰炸", "关掉", "启动", "拿起", "驾驶",
@@ -82,78 +90,83 @@ string verb[] = {"击打", "袭击", "偷袭", "爆破", "打开", "关闭",
                  "张开", "切开", "踢掉", "肘击", "摊开", "抹除",
                  "抹掉", "蹭蹭", "翘起", "扭向", "捏住", "探望",
                  "吐向", "解刨", "否定", "拒绝", "肯定", "张开嘴巴试图吃掉"};
-string vebi[] = {"抽搐",   "走路", "死掉", "卡机", "排泄", "自爆", "发癫",
+
+string Vebi[] = {"抽搐",   "走路", "死掉", "卡机", "排泄", "自爆", "发癫",
                  "害怕",   "思考", "生存", "活着", "呼吸", "睡觉", "起飞",
                  "发疯",   "大哭", "狂笑", "狂笑", "扭曲", "分解", "结合",
                  "融化",   "萎缩", "膨胀", "跳舞", "生锈", "氧化", "游泳",
                  "嗯嗯了", "自裁", "中风"};
-string ten[] = {"十分", "很", "究极", "非常","十分甚至九分"};
-string adv2[] = {"无奈", "失望", "愤怒", "开心",
-                 "用力", "绝望", "懊恼", "心不在焉","头也不回"};
-string adv1[] = {"忘记", "原地", "不断",       "突然",        "进一步",
+
+string Ten[] = {"十分", "很", "究极", "非常","十分甚至九分"};
+
+string Adv1[] = {"忘记", "原地", "不断",       "突然",        "进一步",
                  "逐渐", "悄悄", "把屁股翘起来","站在这里","还没睡醒"};
-string prep[] = {"中", "里面", "外面", "上面", "下面", "内部"};
+
+string Adv2[] = {"无奈", "失望", "愤怒", "开心",
+                 "用力", "绝望", "懊恼", "心不在焉","头也不回"};
+
+string Prep[] = {"中", "里面", "外面", "上面", "下面", "内部"};
+
 #include "Resolve.h"
-#include<iostream>
 ostream&operator/(ostream &cout, string flag){
     if (flag == "RhetObj"){
-        Element::RhetObj();
+        Element::FuncRhetObj();
         return cout;
     } else if (flag == "Obj") {
-        Element::Obj();
+        Element::FuncObj();
         return cout;
     } else if (flag == "RhetVerb") {
-        Element::RhetVerb();
+        Element::FuncRhetVerb();
         return cout;
     } else if (flag == "Action") {
-        Element::Action();
+        Element::FuncAction();
         return cout;
     }else if (flag == "Talk") {
-        Element::Talk();
+        Element::FuncTalk();
         return cout;
     } else if(flag == "Sentence"){
-        Command::Sentence();
+        Command::FuncSentence();
         return cout;
     }
 
-    if (flag == "Start") {
+    if (flag == "start") {
         cout << Start[rand() % sizeof(Start) / sizeof(string)];
         return cout;
-    } else if (flag == "End") {
+    } else if (flag == "end") {
         cout << End[rand() % sizeof(End) / sizeof(string)];
         return cout;
-    } else if (flag == "Say") {
+    } else if (flag == "say") {
         cout << Say[rand() % sizeof(Say) / sizeof(string)];
         return cout;
     } else if (flag == "adj") {
-        cout << adj[rand() % sizeof(adj) / sizeof(string)];
+        cout << Adj[rand() % sizeof(Adj) / sizeof(string)];
         return cout;
     } else if (flag == "noun") {
-        cout << noun[rand() % sizeof(noun) / sizeof(string)];
+        cout << Noun[rand() % sizeof(Noun) / sizeof(string)];
         return cout;
     } else if (flag == "verb") {
-        cout << verb[rand() % sizeof(verb) / sizeof(string)];
+        cout << Verb[rand() % sizeof(Verb) / sizeof(string)];
         return cout;
     } else if (flag == "vebi") {
-        cout << vebi[rand() % sizeof(vebi) / sizeof(string)];
+        cout << Vebi[rand() % sizeof(Vebi) / sizeof(string)];
         return cout;
     } else if (flag == "ten") {
-        cout << ten[rand() % sizeof(ten) / sizeof(string)];
+        cout << Ten[rand() % sizeof(Ten) / sizeof(string)];
         return cout;
     } else if (flag == "adv1") {
-        cout << adv1[rand() % sizeof(adv1) / sizeof(string)];
+        cout << Adv1[rand() % sizeof(Adv1) / sizeof(string)];
         return cout;
     } else if (flag == "adv2") {
-        cout << adv2[rand() % sizeof(adv2) / sizeof(string)];
+        cout << Adv2[rand() % sizeof(Adv2) / sizeof(string)];
         return cout;
     } else if (flag == "prep") {
-        cout << prep[rand() % sizeof(prep) / sizeof(string)];
+        cout << Prep[rand() % sizeof(Prep) / sizeof(string)];
         return cout;
     } else if (flag == "question") {
-        cout << question[rand() % sizeof(question) / sizeof(string)];
+        cout << Question[rand() % sizeof(Question) / sizeof(string)];
         return cout;
     } else if (flag == "para") {
-        cout << para[rand() % sizeof(para) / sizeof(string)];
+        cout << Para[rand() % sizeof(Para) / sizeof(string)];
         return cout;
     } else {
         cout << flag;

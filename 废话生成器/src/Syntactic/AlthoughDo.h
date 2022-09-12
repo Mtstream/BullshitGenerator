@@ -1,7 +1,6 @@
 
 #ifndef 废话生成器_ALTHOUGHDO_H
 #define 废话生成器_ALTHOUGHDO_H
-#include "../Resolve/Resolve.h"
 
 class AlthoughDo{
 public:

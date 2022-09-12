@@ -1,59 +1,59 @@
 #include "Element.h"
 #include "Logical.h"
-void Element::RhetObj() {
+void Element::FuncRhetObj() {
     bool flag = Logical::choice("在");
 
     if (Logical::Magn(0.7)) {
         if(Logical::Magn()){
-            cout/"身为"/"Obj"/"的";
+            cout/"身为"/Obj/"的";
         } else {
-            cout/"para"/"noun"/"一样"/ALT("adj")/"的";
+            cout/para/noun/"一样"/ALT(adj)/"的";
         }
     }
 
     if (flag) {
-        cout/"noun"/"prep"/"的";
+        cout/noun/prep/"的";
     }
 }
-void Element::Obj() {
-    cout/ALT("RhetObj")/"noun";
+void Element::FuncObj() {
+    cout/ALT(RhetObj)/noun;
     if(Logical::Magn()){
-        cout/ALT("和","与")/"Obj"/ALT("们");
+        cout/ALT("和","与")/Obj/ALT("们");
     }
 }
-void Element::RhetVerb() {
+void Element::FuncRhetVerb() {
     if (Logical::Magn(0.7)) {
-        cout/"para"/"noun"/"一样";
+        cout/para/noun/"一样";
     }
-    cout/ALT("adv1");
+    cout/ALT(adv1);
     if (Logical::Magn()) {
-        cout/ALT("ten")/"adv2"/"地";
+        cout/ALT(ten)/adv2/"地";
     }
 }
-bool Element::Talk() {
-    ALT("RhetVerb");
+bool Element::FuncTalk() {
+    ALT(RhetVerb);
     if (Logical::Magn()) {
-        cout/"向"/"Obj"/"Say"/"道：“";
+        cout/"向"/Obj/say/"道：“";
     } else {
-        cout/"Say"/ "：“";
+        cout/say/ "：“";
     }
     return true;
 }
-void Element::Action(bool T){
+void Element::FuncAction(bool T){
     bool flag = false;
     if(Logical::Magn() && T){
         flag = true;
-        cout/"Talk"/"Obj";
+        cout/Talk/Obj;
     }
     if(Logical::Magn()){
-        ALT("RhetVerb");
+        ALT(RhetVerb);
         if(Logical::Magn()){
-            cout/"verb"/"Obj";
+            cout/verb/Obj;
         } else {
-            cout/"vebi";
+            cout/vebi;
         }
     } else {
-        cout/ALT("RhetVerb")/ALT("把","被")/"Obj"/ALT("verb","vebi");
+        cout/ALT(RhetVerb)/ALT("把","被")/Obj/ALT(verb,vebi);
     }
     if(flag){
         cout/ALT("！”","。”");

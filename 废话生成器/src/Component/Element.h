@@ -10,16 +10,15 @@ class Element {
 public:
     friend ostream &operator/(ostream &cout, string flag);
 
-    static void Obj();
+    static void FuncObj();
 
-    static void Action(bool T = true);
+    static void FuncAction(bool T = true);
 
-private:
-    static bool Talk();
+    static bool FuncTalk();
 
-    static void RhetObj();
+    static void FuncRhetObj();
 
-    static void RhetVerb();
+    static void FuncRhetVerb();
 };
 
 #endif //废话生成器_ELEMENT_H

@@ -5,7 +5,7 @@
 #include "../Resolve/Resolve.h"
 class Command {
 public:
-    static void Sentence(void);
+    static void FuncSentence(void);
 private:
     static void Sentence1(void);
     static void Sentence2(void);

@@ -3,14 +3,14 @@
 #include "../Component/Logical.h"
 using namespace std;
 void AlsoDo::Do() {
-    cout/"Obj"/ALT("一定")/"Sentence";
+    cout/Obj/ALT("一定")/Sentence;
 }
 void AlsoDo::AlsoDo1() {
-    cout/"Obj"/"不仅"/"Sentence"/"，还"/"Sentence";
+    cout/Obj/"不仅"/Sentence/"，还"/Sentence;
 }
 void AlsoDo::AlsoDo2() {
-    cout/"Obj"/"在"/"Sentence"/"的同时，还"/"Sentence";
+    cout/Obj/"在"/Sentence/"的同时，还"/Sentence;
 }
 void AlsoDo::AlsoDo3() {
-    cout/"Obj"/"一边"/"Sentence"/"，一边"/"Sentence";
+    cout/Obj/"一边"/Sentence/"，一边"/Sentence;
 }
