@@ -2,6 +2,7 @@
 #include <iostream>
 #include "../Component/Logical.h"
 #include "../Component/Element.h"
+#include "../Syntactic/Command.h"
 using namespace std;
 string Start[] = {"一般理性而言,",
                   "呃呃，我觉得你说的不对，因为",
@@ -91,11 +92,10 @@ string ten[] = {"十分", "很", "究极", "非常","十分甚至九分"};
 string adv2[] = {"无奈", "失望", "愤怒", "开心",
                  "用力", "绝望", "懊恼", "心不在焉","头也不回"};
 string adv1[] = {"忘记", "原地", "不断",       "突然",        "进一步",
-                 "逐渐", "悄悄", "把屁股翘起来"};
+                 "逐渐", "悄悄", "把屁股翘起来","站在这里","还没睡醒"};
 string prep[] = {"中", "里面", "外面", "上面", "下面", "内部"};
 #include "Resolve.h"
 #include<iostream>
-
 ostream&operator/(ostream &cout, string flag){
     if (flag == "RhetObj"){
         Element::RhetObj();
@@ -106,39 +106,56 @@ ostream&operator/(ostream &cout, string flag){
     } else if (flag == "RhetVerb") {
         Element::RhetVerb();
         return cout;
-    } else if (flag == "Do") {
-        Element::Do();
+    } else if (flag == "Action") {
+        Element::Action();
         return cout;
     }else if (flag == "Talk") {
         Element::Talk();
         return cout;
+    } else if(flag == "Sentence"){
+        Command::Sentence();
+        return cout;
     }
+
     if (flag == "Start") {
         cout << Start[rand() % sizeof(Start) / sizeof(string)];
+        return cout;
     } else if (flag == "End") {
         cout << End[rand() % sizeof(End) / sizeof(string)];
+        return cout;
     } else if (flag == "Say") {
         cout << Say[rand() % sizeof(Say) / sizeof(string)];
+        return cout;
     } else if (flag == "adj") {
         cout << adj[rand() % sizeof(adj) / sizeof(string)];
+        return cout;
     } else if (flag == "noun") {
         cout << noun[rand() % sizeof(noun) / sizeof(string)];
+        return cout;
     } else if (flag == "verb") {
         cout << verb[rand() % sizeof(verb) / sizeof(string)];
+        return cout;
     } else if (flag == "vebi") {
         cout << vebi[rand() % sizeof(vebi) / sizeof(string)];
+        return cout;
     } else if (flag == "ten") {
         cout << ten[rand() % sizeof(ten) / sizeof(string)];
+        return cout;
     } else if (flag == "adv1") {
         cout << adv1[rand() % sizeof(adv1) / sizeof(string)];
+        return cout;
     } else if (flag == "adv2") {
         cout << adv2[rand() % sizeof(adv2) / sizeof(string)];
+        return cout;
     } else if (flag == "prep") {
         cout << prep[rand() % sizeof(prep) / sizeof(string)];
+        return cout;
     } else if (flag == "question") {
         cout << question[rand() % sizeof(question) / sizeof(string)];
+        return cout;
     } else if (flag == "para") {
         cout << para[rand() % sizeof(para) / sizeof(string)];
+        return cout;
     } else {
         cout << flag;
     }

@@ -4,32 +4,16 @@
 
 #include "AlsoDo.h"
 #include "../Component/Logical.h"
-#include "../Component/Element.h"
-#include "Command.h"
 using namespace std;
 void AlsoDo::Do() {
-    Element::Obj();
-    Logical::choice("一定");
-    Command::Selection();
+    cout/"Obj"/choose("一定","")/"Sentence";
 }
 void AlsoDo::AlsoDo1() {
-    Element::Obj();
-    cout/"不仅";
-    Command::Selection();
-    cout/",还";
-    Command::Selection();
+    cout/"Obj"/"不仅"/"Sentence"/"，还"/"Sentence";
 }
 void AlsoDo::AlsoDo2() {
-    Element::Obj();
-    cout/"在";
-    Command::Selection();
-    cout/"的同时，还";
-    Command::Selection();
+    cout/"Obj"/"在"/"Sentence"/"的同时，还"/"Sentence";
 }
 void AlsoDo::AlsoDo3() {
-    Element::Obj();
-    cout / "一边";
-    Command::Selection();
-    cout / "，一边";
-    Command::Selection();
+    cout/"Obj"/"一边"/"Sentence"/"，一边"/"Sentence";
 }

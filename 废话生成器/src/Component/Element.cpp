@@ -1,76 +1,67 @@
 #include "Element.h"
 #include "Logical.h"
+#include "../Resolve/Resolve.h"
 void Element::RhetObj() {
+    Logical choose;
     bool flag = Logical::choice("在");
+
     if (Logical::Magn(0.7)) {
         if(Logical::Magn()){
-            cout/"身为";
-            Element::Obj();
-            cout/"的";
+            cout/"身为"/"Obj"/"的";
         } else {
-            cout / "para" / "noun" / "一样";
-            Logical::choice("adj");
-            cout / "的";
+            cout/"para"/"noun"/"一样"/choose("adj")/"的";
         }
     }
+
     if (flag) {
-        cout / "noun" / "prep" / "的";
+        cout/"noun"/"prep"/"的";
     }
 }
 void Element::Obj() {
-    Logical::choice("RhetObj");
-    cout/"noun";
+    Logical choose;
+    cout/choose("RhetObj")/"noun";
     if(Logical::Magn()){
-        Logical::choice("和","与");
-        Element::Obj();
-        Logical::choice("们");
+        cout/choose("和","与")/"Obj"/choose("们");
     }
 }
 void Element::RhetVerb() {
+    Logical choose;
     if (Logical::Magn(0.7)) {
-        cout / "para" / "noun" / "一样";
+        cout/"para"/"noun"/"一样";
     }
-    Logical::choice("adv1");
-    if (Logical::choice()) {
-        Logical::choice("ten");
-        cout / "adv2" / "地";
+    cout/choose("adv1");
+    if (Logical::Magn()) {
+        cout/choose("ten")/"adv2"/"地";
     }
 }
 bool Element::Talk() {
-    Logical::choice("RhetVerb");
-    if (Logical::choice()) {
-        cout / "向";
-        Logical::choice("RhetObj");
-        Obj();
-        cout / "Say" / "道：“";
+    Logical choose;
+    choose("RhetVerb");
+    if (Logical::Magn()) {
+        cout/"向"/"Obj"/"Say"/"道：“";
     } else {
-        cout / "Say" / "：“";
+        cout/"Say"/ "：“";
     }
     return true;
 }
-void Element::Do(bool T){
+void Element::Action(bool T){
+    Logical choose;
     bool flag = false;
-    if(Logical::choice() && T){
+    if(Logical::Magn() && T){
         flag = true;
-        Element::Talk();
-        Element::Obj();
+        cout/"Talk"/"Obj";
     }
-    if(Logical::choice()){
-        Logical::choice("RhetVerb");
-        if(Logical::choice()){
-            cout/"verb";
-            Obj();
+    if(Logical::Magn()){
+        choose("RhetVerb");
+        if(Logical::Magn()){
+            cout/"verb"/"Obj";
         } else {
             cout/"vebi";
         }
     } else {
-        Logical::choice("RhetVerb");
-        Logical::choice("把","被");
-        Element::Obj();
-        Logical::choice("verb","vebi");
+        cout/choose("RhetVerb")/choose("把","被")/"Obj"/choose("verb","vebi");
     }
     if(flag){
-        Logical::choice("。","！");
-        cout/"”";
+        cout/choose("！”","。”");
     }
 }

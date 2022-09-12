@@ -2,8 +2,8 @@
 // Created by Jerry Zhou on 11/9/2022.
 //
 
-#ifndef 废话生成器_ALTHOUGHDO_H
-#define 废话生成器_ALTHOUGHDO_H
+#ifndef 废话生成器_chooseHOUGHDO_H
+#define 废话生成器_chooseHOUGHDO_H
 #include "../Resolve/Resolve.h"
 
 class AlthoughDo{
@@ -13,4 +13,4 @@ public:
 };
 
 
-#endif //废话生成器_ALTHOUGHDO_H
+#endif //废话生成器_chooseHOUGHDO_H

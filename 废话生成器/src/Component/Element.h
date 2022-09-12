@@ -12,7 +12,7 @@ public:
 
     static void Obj();
 
-    static void Do(bool T = true);
+    static void Action(bool T = true);
 
 private:
     static bool Talk();

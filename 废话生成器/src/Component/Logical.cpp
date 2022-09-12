@@ -19,3 +19,10 @@ bool Logical::Magn(double Magn) {
         return false;
     }
 }
+string Logical::operator()(string A,string B){
+    if(Magn()){
+        return A;
+    } else {
+        return B;
+    }
+}

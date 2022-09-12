@@ -8,15 +8,15 @@
 #include "../Resolve/Resolve.h"
 class Command {
 public:
-    static void Selection(void);
+    static void Sentence(void);
 private:
-    static void Command1(void);
-    static void Command2(void);
-    static void Command3(void);
-    static void Command4(void);
-    static void Command5(void);
-    static void Command6(void);
-    static void Command7(void);
+    static void Sentence1(void);
+    static void Sentence2(void);
+    static void Sentence3(void);
+    static void Sentence4(void);
+    static void Sentence5(void);
+    static void Sentence6(void);
+    static void Sentence7(void);
 };
 
 
