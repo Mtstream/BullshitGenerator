@@ -5,7 +5,7 @@ public:
     void print(int times = 0){
         if(times < 5){
             cout/Syntactic;
-            cout/ALT("!","。");
+            cout/ALT("！","。");
             print(times + 1);
         }
     }

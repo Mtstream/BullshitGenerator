@@ -2,8 +2,7 @@
 void Sentence::Parser() {
     switch(rand()%10){
         case 2:
-            cout/ALT("是由","是根据")/Obj;
-            cout/Action/"的";
+            cout/ALT("是由","是根据")/Obj/Action/"的";
             break;
 
         case 3:
@@ -23,6 +22,7 @@ void Sentence::Parser() {
 
             cout/ALT("将会跟随","将会被你引导去和")/Obj/"一起"/Action;
 
+            break;
         default:
 
             cout/ALT("会","不会")/Action;

@@ -2,7 +2,7 @@
 bool Element::Parser(string Typename) {
     if(Typename == "RhetObj"){
         bool flag = Logical::choice("在");
-        if (Logical::Magn(0.5)) {
+        if (Logical::Magn(0.7)) {
             if(Logical::Magn()){
                 cout/"身为"/Obj/"的";
             } else {
@@ -15,12 +15,12 @@ bool Element::Parser(string Typename) {
         return true;
     } else if(Typename == "Obj"){
         cout/ALT(RhetObj)/noun;
-        if(Logical::Magn(0.5)){
+        if(Logical::Magn(0.7)){
             cout/ALT("和","与")/Obj/ALT("们");
         }
         return true;
     } else if(Typename == "RhetVerb"){
-        if (Logical::Magn(0.5)) {
+        if (Logical::Magn(0.7)) {
             cout/para/noun/"一样";
         }
         cout/ALT(adv1);

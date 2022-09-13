@@ -1,7 +1,7 @@
 #include "../Headers.h"
 using namespace std;
 bool Syntactic::Parser() {
-    int RandMax = 10;
+    int RandMax = 8;
     cout/ALT(question,start);
     switch(rand()% RandMax + 1) {
         case 1:
@@ -26,4 +26,5 @@ bool Syntactic::Parser() {
             cout/ALT("如果","假设")/Obj/Sentence/"，那么"/"Obj"/ALT("就","就一定")/Sentence;
     }
     ALT(ended);
+    return true;
 }
