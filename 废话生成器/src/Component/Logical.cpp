@@ -1,5 +1,4 @@
-
-#include "Logical.h"
+#include "../Headers.h"
 bool Logical::choice(std::string A, std::string B) {
     if ((rand() % 20) > 10) {
         cout / A;

@@ -1,8 +1,7 @@
 
 #ifndef 废话生成器_LOGICAL_H
 #define 废话生成器_LOGICAL_H
-#include <string>
-#include "../Resolve/Resolve.h"
+#include "../Headers.h"
 using namespace std;
 
 class Logical {

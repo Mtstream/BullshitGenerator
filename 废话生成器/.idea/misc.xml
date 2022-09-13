@@ -5,7 +5,7 @@
     <sourceRoots>
       <file path="$PROJECT_DIR$/src" />
       <file path="$PROJECT_DIR$/src/Component" />
-      <file path="$PROJECT_DIR$/src/Resolve" />
+      <file path="$PROJECT_DIR$/src/PolyParser" />
       <file path="$PROJECT_DIR$/src/Syntactic" />
     </sourceRoots>
   </component>

@@ -58,8 +58,7 @@
 				5,
 				7,
 				9,
-				11,
-				13
+				11
 			]
 		}
 	],
@@ -98,8 +97,7 @@
 				5,
 				7,
 				9,
-				11,
-				13
+				11
 			]
 		},
 		{
@@ -112,7 +110,7 @@
 				8,
 				10,
 				12,
-				14
+				13
 			]
 		}
 	],
@@ -127,45 +125,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/Resolve/Resolve.cpp",
+			"path" : "src/PolyParser/Resolve.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "src/Resolve/Resolve.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/Syntactic/AlsoDo.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/Syntactic/AlsoDo.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/Syntactic/AlthoughDo.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/Syntactic/AlthoughDo.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/Syntactic/DoIf.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/Syntactic/DoIf.h",
+			"path" : "src/PolyParser/Resolve.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -193,12 +158,39 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/Syntactic/Command.cpp",
+			"path" : "src/Syntactic/Sentence.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "src/Syntactic/Command.h",
+			"path" : "src/Syntactic/Sentence.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/Component/Word.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/Component/Word.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/Syntactic/Syntactic.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/Syntactic/Syntactic.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/Headers.h",
 			"sourceGroupIndex" : 1
 		}
 	],
