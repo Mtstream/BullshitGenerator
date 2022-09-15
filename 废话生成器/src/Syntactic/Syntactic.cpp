@@ -2,8 +2,8 @@
 using namespace std;
 bool Syntactic::Parser() {
     int RandMax = 8;
-    cout/ALT(question,start);
-    switch(rand()% RandMax + 1) {
+    cout/ALT(ALT(question,start));
+    switch(rand() % (RandMax * 2)) {
         case 1:
             cout/Obj/ALT("一定")/Sentence;
             break;
@@ -24,7 +24,10 @@ bool Syntactic::Parser() {
             break;
         case 7:
             cout/ALT("如果","假设")/Obj/Sentence/"，那么"/"Obj"/ALT("就","就一定")/Sentence;
+        default:
+            cout/Sentence;
     }
     ALT(ended);
+    cout/ALT("！","。");
     return true;
 }

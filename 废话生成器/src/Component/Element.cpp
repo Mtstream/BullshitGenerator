@@ -1,12 +1,14 @@
 #include "../Headers.h"
-bool Element::Parser(string Typename) {
+#include <functional>
+negate<int> negative;
+int Element::Parser(string Typename) {
     if(Typename == "RhetObj"){
         bool flag = Logical::choice("在");
         if (Logical::Magn(0.7)) {
             if(Logical::Magn()){
                 cout/"身为"/Obj/"的";
             } else {
-                cout/para/noun/"一样"/ALT(adj)/"的";
+                cout/para/noun/ALT(adj)/"一样的";
             }
         }
         if (flag) {
@@ -14,9 +16,13 @@ bool Element::Parser(string Typename) {
         }
         return true;
     } else if(Typename == "Obj"){
+        static bool flag = true;
         cout/ALT(RhetObj)/noun;
         if(Logical::Magn(0.7)){
-            cout/ALT("和","与")/Obj/ALT("们");
+            if(flag){
+                cout/ALT("和","与")/Obj/ALT("们");
+            }
+            negative(flag);
         }
         return true;
     } else if(Typename == "RhetVerb"){
@@ -53,7 +59,7 @@ bool Element::Parser(string Typename) {
             cout/ALT(RhetVerb)/ALT("把","被")/Obj/ALT(verb,vebi);
         }
         if(flag){
-            cout/ALT("”","”");
+            cout/ALT("！”","。”");
         }
         return true;
     }

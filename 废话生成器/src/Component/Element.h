@@ -12,7 +12,7 @@ class Element {
 public:
     friend ostream &operator/(ostream &cout, string flag);
 
-    static bool Parser(string Typename);
+    static int Parser(string Typename);
 };
 static string  RhetObj = "RhetObj";
 static string   Obj = "Obj";
