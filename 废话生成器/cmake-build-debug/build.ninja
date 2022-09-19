@@ -36,7 +36,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /Users/jerryzhou/CLionProjects/废话生成器/cmake-build-debug/
+cmake_ninja_workdir = /Users/jerryzhou/OneDrive/Code/废话生成器/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target untitled
 
@@ -46,47 +46,35 @@ cmake_ninja_workdir = /Users/jerryzhou/CLionProjects/废话生成器/cmake-build
 
 build cmake_object_order_depends_target_untitled: phony || CMakeFiles/untitled.dir
 
-build CMakeFiles/untitled.dir/src/main.cpp.o: CXX_COMPILER__untitled_Debug /Users/jerryzhou/CLionProjects/废话生成器/src/main.cpp || cmake_object_order_depends_target_untitled
+build CMakeFiles/untitled.dir/src/main.cpp.o: CXX_COMPILER__untitled_Debug /Users/jerryzhou/OneDrive/Code/废话生成器/src/main.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles/untitled.dir/src/main.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1 -std=gnu++17
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir/src
 
-build CMakeFiles/untitled.dir/src/PolyParser/Resolve.cpp.o: CXX_COMPILER__untitled_Debug /Users/jerryzhou/CLionProjects/废话生成器/src/PolyParser/Resolve.cpp || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/src/PolyParser/Resolve.cpp.o.d
+build CMakeFiles/untitled.dir/src/Factory/Word.cpp.o: CXX_COMPILER__untitled_Debug /Users/jerryzhou/OneDrive/Code/废话生成器/src/Factory/Word.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/src/Factory/Word.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1 -std=gnu++17
   OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/src/PolyParser
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/src/Factory
 
-build CMakeFiles/untitled.dir/src/Component/Logical.cpp.o: CXX_COMPILER__untitled_Debug /Users/jerryzhou/CLionProjects/废话生成器/src/Component/Logical.cpp || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/src/Component/Logical.cpp.o.d
+build CMakeFiles/untitled.dir/src/Factory/WordFactory.cpp.o: CXX_COMPILER__untitled_Debug /Users/jerryzhou/OneDrive/Code/废话生成器/src/Factory/WordFactory.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/src/Factory/WordFactory.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1 -std=gnu++17
   OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/src/Component
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/src/Factory
 
-build CMakeFiles/untitled.dir/src/Component/Element.cpp.o: CXX_COMPILER__untitled_Debug /Users/jerryzhou/CLionProjects/废话生成器/src/Component/Element.cpp || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/src/Component/Element.cpp.o.d
+build CMakeFiles/untitled.dir/src/Decorator/Decorator.cpp.o: CXX_COMPILER__untitled_Debug /Users/jerryzhou/OneDrive/Code/废话生成器/src/Decorator/Decorator.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/src/Decorator/Decorator.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1 -std=gnu++17
   OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/src/Component
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/src/Decorator
 
-build CMakeFiles/untitled.dir/src/Syntactic/Sentence.cpp.o: CXX_COMPILER__untitled_Debug /Users/jerryzhou/CLionProjects/废话生成器/src/Syntactic/Sentence.cpp || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/src/Syntactic/Sentence.cpp.o.d
+build CMakeFiles/untitled.dir/src/Decorator/AppendLib.cpp.o: CXX_COMPILER__untitled_Debug /Users/jerryzhou/OneDrive/Code/废话生成器/src/Decorator/AppendLib.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/src/Decorator/AppendLib.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1 -std=gnu++17
   OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/src/Syntactic
-
-build CMakeFiles/untitled.dir/src/Component/Word.cpp.o: CXX_COMPILER__untitled_Debug /Users/jerryzhou/CLionProjects/废话生成器/src/Component/Word.cpp || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/src/Component/Word.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1 -std=gnu++17
-  OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/src/Component
-
-build CMakeFiles/untitled.dir/src/Syntactic/Syntactic.cpp.o: CXX_COMPILER__untitled_Debug /Users/jerryzhou/CLionProjects/废话生成器/src/Syntactic/Syntactic.cpp || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/src/Syntactic/Syntactic.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1 -std=gnu++17
-  OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/src/Syntactic
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/src/Decorator
 
 
 # =============================================================================
@@ -96,7 +84,7 @@ build CMakeFiles/untitled.dir/src/Syntactic/Syntactic.cpp.o: CXX_COMPILER__untit
 #############################################
 # Link the executable untitled
 
-build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/src/main.cpp.o CMakeFiles/untitled.dir/src/PolyParser/Resolve.cpp.o CMakeFiles/untitled.dir/src/Component/Logical.cpp.o CMakeFiles/untitled.dir/src/Component/Element.cpp.o CMakeFiles/untitled.dir/src/Syntactic/Sentence.cpp.o CMakeFiles/untitled.dir/src/Component/Word.cpp.o CMakeFiles/untitled.dir/src/Syntactic/Syntactic.cpp.o
+build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/src/main.cpp.o CMakeFiles/untitled.dir/src/Factory/Word.cpp.o CMakeFiles/untitled.dir/src/Factory/WordFactory.cpp.o CMakeFiles/untitled.dir/src/Decorator/Decorator.cpp.o CMakeFiles/untitled.dir/src/Decorator/AppendLib.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1
   OBJECT_DIR = CMakeFiles/untitled.dir
   POST_BUILD = :
@@ -109,7 +97,7 @@ build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/sr
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/jerryzhou/CLionProjects/废话生成器/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /Users/jerryzhou/OneDrive/Code/废话生成器/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -120,7 +108,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/jerryzhou/CLionProjects/废话生成器/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/jerryzhou/CLionProjects/废话生成器 -B/Users/jerryzhou/CLionProjects/废话生成器/cmake-build-debug
+  COMMAND = cd /Users/jerryzhou/OneDrive/Code/废话生成器/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/jerryzhou/OneDrive/Code/废话生成器 -B/Users/jerryzhou/OneDrive/Code/废话生成器/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -136,7 +124,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 #############################################
-# Folder: /Users/jerryzhou/CLionProjects/废话生成器/cmake-build-debug
+# Folder: /Users/jerryzhou/OneDrive/Code/废话生成器/cmake-build-debug
 
 build all: phony untitled
 
